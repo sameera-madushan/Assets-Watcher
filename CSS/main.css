@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 30px 20px 20px 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 260px;
+    gap: 10px;
+    position: relative;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-grow: 1;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#result-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 260px;
+    margin-top: 20px;
+}
+#result-list li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#result-list li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    word-break: break-all;
+}
+#result-list li a:hover {
+    color: #0056b3;
+}
+#message-container {
+    padding-bottom: 10px;
+}
+.icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+.icon-wrapper {
+    position: relative;
+}
+.tooltip {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 100px;
+}
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.icon-wrapper:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.file-input {
+    display: none;
+}

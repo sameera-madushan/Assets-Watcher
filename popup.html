@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/main.css">
+    <title>Assets Watcher</title>
+</head>
+<body>
+    <div id="message-container"></div>
+    <div class="button-container">
+        <button id="save-url">Add to Watchlist</button>
+        <div class="icon-wrapper">
+            <svg id="export" class="w-6 h-6 text-gray-800 dark:text-white icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v9m-5 0H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2M8 9l4-5 4 5m1 8h.01"/>
+            </svg>
+            <span class="tooltip">Export</span>
+        </div>
+        <div class="icon-wrapper">
+            <svg id="import" class="w-6 h-6 text-gray-800 dark:text-white icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/>
+            </svg>
+            <span class="tooltip">Import</span>
+        </div>
+        <input type="file" id="file-input" class="file-input" accept=".json">
+    </div>
+    <ul id="result-list"></ul>
+    <a href="https://github.com/sameera-madushan" target="_blank">Developed by Sameera Madushan</a>
+    <script src="JS/popup.js"></script>
+</body>
+</html>
