@@ -49,10 +49,11 @@ button:hover {
     align-items: center;
 }
 #result-list li a {
-    color: #007bff;
+    color: black;
     text-decoration: none;
     transition: color 0.3s ease;
     word-break: break-all;
+    font-weight: bold;
 }
 #result-list li a:hover {
     color: #0056b3;
@@ -101,4 +102,17 @@ button:hover {
 }
 .file-input {
     display: none;
+}
+.search-input {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 15px;
+    display: block;
+}
+
+.search-input.show {
+    display: block;
 }

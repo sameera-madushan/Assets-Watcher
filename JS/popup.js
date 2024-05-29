@@ -4,8 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var importButton = document.getElementById('import');
     var fileInput = document.getElementById('file-input');
     var storedData = JSON.parse(localStorage.getItem('storedData')) || [];
+    var searchInput = document.getElementById('search-input');
 
     updatePopupContent(storedData);
+
+    searchInput.addEventListener('input', function() {
+        var searchTerm = searchInput.value.toLowerCase();
+        var filteredData = storedData.filter(function(item) {
+            return item.extractedPart.toLowerCase().includes(searchTerm);
+        });
+        updatePopupContent(filteredData);
+    });
 
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         if (tabs.length === 0) {
